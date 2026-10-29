@@ -6,7 +6,7 @@ class RICES:
     def __init__(self, dataset, split, valid_ids=None) -> None:
         self.dataset = dataset
         self.split = split
-        similarity_path = "/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/data/visual_features/visual_features"
+        similarity_path = "/home/gkianfar/scratch/Amin/Skin/MedicalConcept/data/visual_features/visual_features"
 
         if self.split is not None:
             with open(os.path.join(similarity_path, f"{self.dataset}_split_{self.split}_ExpLICD_image_features_train.pkl"), "rb") as f:
