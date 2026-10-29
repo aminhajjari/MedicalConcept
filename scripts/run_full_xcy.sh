@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #SBATCH --job-name=xcy_fullexp
 #SBATCH --account=def-arashmoh_gpu
