@@ -25,7 +25,7 @@ from mmed_refiner import MMedBasedRefiner
 # ==============================
 # LOCAL CHECKPOINT PATH
 # ==============================
-MMED_CKPT_PATH = '/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/checkpoint/MMed-Llama-3-8B-EnIns'
+MMED_CKPT_PATH = '/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/MMed-Llama-3-8B-EnIns'
 
 
 
