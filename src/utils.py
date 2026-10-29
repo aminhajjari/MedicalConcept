@@ -189,7 +189,7 @@ def create_explicd_config(gpu_id):
     config.gpu = str(gpu_id)
     config.dataset = "isic2018"
     config.model = "explicd"
-    config.load = "/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/checkpoint/explicd_best.pth"
+    config.load = "/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/explicd_best.pth"
   
     os.environ['CUDA_VISIBLE_DEVICES'] = config.gpu
     print('use model:', config.model)
@@ -205,7 +205,7 @@ def create_explicd_config(gpu_id):
     config.num_class = num_class_dict[config.dataset]
 
     # ====================== LOCAL BIOMEDCLIP LOADING ======================
-    local_dir = "/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/checkpoint/BiomedCLIP"
+    local_dir = "/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/BiomedCLIP"
    
     print(f"Loading BiomedCLIP from local directory: {local_dir}")
    
@@ -217,7 +217,7 @@ def create_explicd_config(gpu_id):
     preprocess_cfg = clip_config.get("preprocess_cfg", {})
 
     # Redirect text encoder to local BiomedBERT (no internet needed on compute node)
-    BIOMEDBERT_LOCAL = "/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/checkpoint/hf_cache/models--microsoft--BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/snapshots/main"
+    BIOMEDBERT_LOCAL = "/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/hf_cache/models--microsoft--BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/snapshots/main"
     model_cfg["text_cfg"]["hf_model_name"] = BIOMEDBERT_LOCAL
     model_cfg["text_cfg"]["hf_tokenizer_name"] = BIOMEDBERT_LOCAL
    
