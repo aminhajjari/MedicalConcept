@@ -5,11 +5,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 class Mistral:
+    
 
-    MISTRAL_LOCAL = (
-        "/home/gkianfar/scratch/Amin/concept/maincode/"
-        "Self-2-step-concept-based-skin-diagnosis/checkpoint/Mistral-7B-Instruct"
-    )
+    MISTRAL_LOCAL = "/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/Mistral-7B-Instruct"
 
     def __init__(self, ckpt=None, max_memory=None):
         if ckpt is None:
