@@ -647,7 +647,7 @@ def build_classifier(model_name: str, ckpt: str):
     if model_name == "MMed":
         return MMedLlama3(ckpt)
     elif model_name == "Mistral":
-        return Mistral()
+        return Mistral(ckpt=ckpt)
     elif model_name == "MedGemma":
         return MedGemma(ckpt=ckpt)
     elif model_name == "Qwen":
