@@ -12,7 +12,7 @@ class MMedBasedRefiner:
     MMed-LLM based refiner that uses MMed-Llama-3-8B to refine concept predictions.
     """
 
-    def __init__(self, ckpt="/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/checkpoint/MMed-Llama-3-8B-EnIns"):
+    def __init__(self, ckpt="/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/MMed-Llama-3-8B-EnIns"):
         print(f"Loading MMed-LLM refiner: {ckpt}")
         self.model = MMedLlama3(ckpt=ckpt)
         print("✓ MMed-LLM refiner loaded")
@@ -220,7 +220,7 @@ if __name__ == "__main__":
     print("=" * 80)
 
     refiner = MMedBasedRefiner(
-        ckpt="/home/gkianfar/scratch/Amin/concept/maincode/Self-2-step-concept-based-skin-diagnosis/checkpoint/MMed-Llama-3-8B-EnIns"
+        ckpt="/home/gkianfar/scratch/Amin/Skin/MedicalConcept/checkpoint/MMed-Llama-3-8B-EnIns"
     )
 
     test_concepts = (
